@@ -1,0 +1,110 @@
+<div style="width: 100%" class="container">
+	<div>
+		<div class="row">
+
+
+
+
+
+			<div class="col-md-6">
+
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<strong>Activity</strong> {{file}}
+					</div>
+					<div class="panel-body" style="height: 100px; margin-top: 2%">
+						<div class="alert alert-success"
+							style="height: 81%; margin-top: -2%">
+							<div class="col-md-4"  >
+							
+								<span class="btn btn-info btn-file"> Browse <input
+									type="file" id="file" file-Model="file">
+									
+								</span>
+								 
+								
+								<span file-Model="" ng-model="otherFileMessage">{{otherFileMessage}}</span>
+								 
+
+								  <div ng-if="flagSuccess==true"
+									class="alert alert-info alert-dismissable fade in ng-binding ng-scope"
+									style="height: 42px; width: 344px; margin-left: -4%; margin-top: 7%;">
+									<a href="#" class="close" data-dismiss="alert"
+										aria-label="close"></a><strong><span>{{message}}</span></strong>
+
+								</div>
+
+								<div ng-if="flagError==true"
+									class="alert alert-danger alert-dismissable fade in ng-binding ng-scope"
+									style="height: 42px; width: 344px; margin-left: -4%; margin-top: 7%;">
+									<a href="#" class="close" data-dismiss="alert"
+										aria-label="close"></a><strong><span>{{message}}</span></strong>
+
+								</div> 
+
+							</div>
+					
+					
+							<div class="col-md-6" style="margin-left: -21%;"> <input type="text" class="form-control" ng-model="fileHolder" file-Model=""   placeholder="No file choosen.."> </div>
+					
+							 <div class="col-md-4">
+							 
+							 
+								<button type="button" class="btn btn-success btn-md"
+									ng-click="submitUser(file)">Submit</button>
+								<button type="button" class="btn btn-danger btn-md"
+									ng-click="clearAll()">Clear</button>
+							</div>  
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="col-md-6">
+
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<Strong>Records</Strong>
+					</div>
+					<div class="panel-body" style="height: 113px">
+						<div class="alert alert-success">
+							<strong> Total Records <span class="badge">{{totalCount.totalCount}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								Valid Records <span class="badge">{{totalCount.validCount}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								Invalid Records <span class="badge">{{totalCount.invalidCount}}</span>
+							</strong>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<strong>History</strong>
+				</div>
+				<div style="height: 400px" class="panel-body">
+					<div id="gridOptions1" ui-grid="gridOptions" ui-grid-resize-columns
+						ui-grid-auto-resize ui-grid-pagination class="grid"></div>
+
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+</div>
